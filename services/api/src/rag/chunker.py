@@ -52,12 +52,12 @@ class Chunker:
     ) -> List[Chunk]:
         """
         Chunks text within a page using a sliding window approach with configurable overlap.
-        Preserves sentence boundaries where possible.
+        Preserves section titles and handles arbitrary paragraph or sentence lengths.
         """
         if not text.strip():
             return []
 
-        # Split into sentences or paragraphs
+        # Split into paragraphs
         paragraphs = [p.strip() for p in text.split("\n\n") if p.strip()]
         if not paragraphs:
             paragraphs = [text.strip()]
@@ -76,27 +76,47 @@ class Chunker:
             if not words:
                 continue
 
-            # If adding this paragraph exceeds target chunk size and we already have content
-            if current_words and (len(current_words) + len(words) > self.target_chunk_size):
-                chunk_str = " ".join(current_words)
-                chunks.append(
-                    Chunk(
-                        chunk_index=current_chunk_idx,
-                        content=chunk_str,
-                        page_number=page_number,
-                        section_title=current_section,
-                        token_count=self.estimate_tokens(chunk_str),
+            idx = 0
+            while idx < len(words):
+                remaining_slots = self.target_chunk_size - len(current_words)
+                if remaining_slots <= 0:
+                    chunk_str = " ".join(current_words)
+                    chunks.append(
+                        Chunk(
+                            chunk_index=current_chunk_idx,
+                            content=chunk_str,
+                            page_number=page_number,
+                            section_title=current_section,
+                            token_count=self.estimate_tokens(chunk_str),
+                        )
                     )
-                )
-                current_chunk_idx += 1
+                    current_chunk_idx += 1
+                    if self.overlap > 0 and len(current_words) > self.overlap:
+                        current_words = current_words[-self.overlap:]
+                    else:
+                        current_words = []
+                    remaining_slots = self.target_chunk_size - len(current_words)
 
-                # Keep overlap words
-                if self.overlap > 0 and len(current_words) > self.overlap:
-                    current_words = current_words[-self.overlap:]
-                else:
-                    current_words = []
+                take = words[idx : idx + remaining_slots]
+                current_words.extend(take)
+                idx += len(take)
 
-            current_words.extend(words)
+                if len(current_words) >= self.target_chunk_size and idx < len(words):
+                    chunk_str = " ".join(current_words)
+                    chunks.append(
+                        Chunk(
+                            chunk_index=current_chunk_idx,
+                            content=chunk_str,
+                            page_number=page_number,
+                            section_title=current_section,
+                            token_count=self.estimate_tokens(chunk_str),
+                        )
+                    )
+                    current_chunk_idx += 1
+                    if self.overlap > 0 and len(current_words) > self.overlap:
+                        current_words = current_words[-self.overlap:]
+                    else:
+                        current_words = []
 
         if current_words:
             chunk_str = " ".join(current_words)

@@ -82,6 +82,7 @@ def create_sample_pdf_bytes() -> bytes:
 
 def test_vertical_slice_end_to_end(setup_test_db, monkeypatch):
     db, user, ws = setup_test_db
+    monkeypatch.setattr("services.api.src.services.document_service.DocumentService.enqueue_ingestion", lambda doc_id: None)
     monkeypatch.setattr("services.api.src.services.ingestion_worker.SessionLocal", TestSessionLocal)
 
     # 1. Upload Document

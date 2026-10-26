@@ -1,29 +1,29 @@
 {
   "Dense Retrieval": {
-    "recall@1": 0.8125,
+    "recall@1": 0.75,
     "recall@3": 0.9062,
     "recall@5": 0.9062,
-    "mrr": 0.8542,
-    "ndcg@5": 0.9267,
+    "mrr": 0.8229,
+    "ndcg@5": 0.9234,
     "citation_validity": 1.0,
     "citation_support": 1.0,
-    "answer_correctness": 0.5333,
+    "answer_correctness": 0.5021,
     "abstention_accuracy": 0.625,
-    "p50_latency_ms": 30.43,
-    "p95_latency_ms": 37.05,
-    "retrieval_p50_ms": 28.74,
-    "retrieval_p95_ms": 34.98,
+    "p50_latency_ms": 26.89,
+    "p95_latency_ms": 32.72,
+    "retrieval_p50_ms": 25.1,
+    "retrieval_p95_ms": 30.87,
     "avg_input_tokens": 685.5,
-    "avg_output_tokens": 32.5,
-    "est_cost_per_query_usd": "$0.000122",
+    "avg_output_tokens": 34.3,
+    "est_cost_per_query_usd": "$0.000123",
     "categories": {
       "direct_factual": {
         "avg_recall5": 1.0,
-        "avg_correctness": 0.9333
+        "avg_correctness": 0.8333
       },
       "multi_passage": {
         "avg_recall5": 1.0,
-        "avg_correctness": 0.4062
+        "avg_correctness": 0.375
       },
       "cross_document": {
         "avg_recall5": 0.5,
@@ -44,30 +44,30 @@
     }
   },
   "Hybrid Retrieval (RRF)": {
-    "recall@1": 0.8438,
+    "recall@1": 0.7812,
     "recall@3": 0.9062,
     "recall@5": 0.9062,
-    "mrr": 0.875,
-    "ndcg@5": 0.9423,
+    "mrr": 0.8438,
+    "ndcg@5": 0.939,
     "citation_validity": 1.0,
     "citation_support": 1.0,
-    "answer_correctness": 0.5333,
+    "answer_correctness": 0.5021,
     "abstention_accuracy": 0.625,
-    "p50_latency_ms": 33.65,
-    "p95_latency_ms": 70.44,
-    "retrieval_p50_ms": 31.95,
-    "retrieval_p95_ms": 68.52,
+    "p50_latency_ms": 30.03,
+    "p95_latency_ms": 36.39,
+    "retrieval_p50_ms": 28.35,
+    "retrieval_p95_ms": 34.38,
     "avg_input_tokens": 685.5,
-    "avg_output_tokens": 32.5,
-    "est_cost_per_query_usd": "$0.000122",
+    "avg_output_tokens": 34.3,
+    "est_cost_per_query_usd": "$0.000123",
     "categories": {
       "direct_factual": {
         "avg_recall5": 1.0,
-        "avg_correctness": 0.9333
+        "avg_correctness": 0.8333
       },
       "multi_passage": {
         "avg_recall5": 1.0,
-        "avg_correctness": 0.4062
+        "avg_correctness": 0.375
       },
       "cross_document": {
         "avg_recall5": 0.5,
@@ -92,18 +92,18 @@
     "recall@3": 0.9062,
     "recall@5": 0.9062,
     "mrr": 0.875,
-    "ndcg@5": 0.9423,
+    "ndcg@5": 0.962,
     "citation_validity": 1.0,
     "citation_support": 1.0,
     "answer_correctness": 0.5333,
     "abstention_accuracy": 0.625,
-    "p50_latency_ms": 32.07,
-    "p95_latency_ms": 52.11,
-    "retrieval_p50_ms": 30.08,
-    "retrieval_p95_ms": 50.21,
+    "p50_latency_ms": 29.12,
+    "p95_latency_ms": 35.45,
+    "retrieval_p50_ms": 27.45,
+    "retrieval_p95_ms": 32.68,
     "avg_input_tokens": 685.5,
-    "avg_output_tokens": 32.5,
-    "est_cost_per_query_usd": "$0.000122",
+    "avg_output_tokens": 34.4,
+    "est_cost_per_query_usd": "$0.000123",
     "categories": {
       "direct_factual": {
         "avg_recall5": 1.0,

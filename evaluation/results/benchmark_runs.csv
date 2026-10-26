@@ -1,121 +1,121 @@
 config,question_id,category,recall@5,mrr,citation_validity,citation_support,answer_correctness,retrieval_latency_ms,total_latency_ms
-Dense Retrieval,q01,direct_factual,1.0,1.0,1.0,1.0,1.0,31.6,34.58
-Dense Retrieval,q02,direct_factual,1.0,1.0,1.0,1.0,1.0,27.0,29.24
-Dense Retrieval,q03,direct_factual,1.0,1.0,1.0,1.0,1.0,27.9,30.24
-Dense Retrieval,q04,direct_factual,1.0,1.0,1.0,1.0,1.0,29.65,31.21
-Dense Retrieval,q05,direct_factual,1.0,1.0,1.0,1.0,1.0,30.79,33.2
-Dense Retrieval,q06,direct_factual,1.0,1.0,1.0,1.0,1.0,33.72,35.11
-Dense Retrieval,q07,direct_factual,1.0,1.0,1.0,1.0,1.0,25.88,27.75
-Dense Retrieval,q08,direct_factual,1.0,1.0,1.0,1.0,0.33,25.22,26.59
-Dense Retrieval,q09,direct_factual,1.0,1.0,1.0,1.0,1.0,23.7,25.86
-Dense Retrieval,q10,direct_factual,1.0,1.0,1.0,1.0,1.0,26.73,28.78
-Dense Retrieval,q11,multi_passage,1.0,1.0,1.0,1.0,0.5,33.11,36.32
-Dense Retrieval,q12,multi_passage,1.0,1.0,1.0,1.0,0.0,33.72,35.33
-Dense Retrieval,q13,multi_passage,1.0,1.0,1.0,1.0,0.0,30.2,31.31
-Dense Retrieval,q14,multi_passage,1.0,1.0,1.0,1.0,0.75,42.74,44.26
-Dense Retrieval,q15,multi_passage,1.0,1.0,1.0,1.0,0.0,29.44,30.62
-Dense Retrieval,q16,multi_passage,1.0,1.0,1.0,1.0,1.0,29.21,31.25
-Dense Retrieval,q17,multi_passage,1.0,1.0,1.0,1.0,0.0,29.83,31.53
-Dense Retrieval,q18,multi_passage,1.0,1.0,1.0,1.0,1.0,27.89,29.58
-Dense Retrieval,q19,cross_document,1.0,1.0,1.0,1.0,0.0,31.54,33.92
-Dense Retrieval,q20,cross_document,0.0,0.0,1.0,1.0,0.25,31.2,34.54
-Dense Retrieval,q21,cross_document,0.0,0.0,1.0,1.0,0.0,29.91,31.83
-Dense Retrieval,q22,cross_document,1.0,0.333,1.0,1.0,0.0,33.93,36.3
-Dense Retrieval,q23,cross_document,1.0,0.5,1.0,1.0,0.0,37.06,39.09
-Dense Retrieval,q24,cross_document,0.0,0.0,1.0,1.0,0.0,34.87,36.94
-Dense Retrieval,q25,conflicting_nuanced,1.0,1.0,1.0,1.0,1.0,28.59,30.71
-Dense Retrieval,q26,conflicting_nuanced,1.0,1.0,1.0,1.0,0.0,28.88,30.17
-Dense Retrieval,q27,conflicting_nuanced,1.0,1.0,1.0,1.0,0.0,25.03,26.02
-Dense Retrieval,q28,conflicting_nuanced,1.0,1.0,1.0,1.0,0.5,27.75,28.71
-Dense Retrieval,q29,section_specific,1.0,0.5,1.0,1.0,1.0,25.48,27.35
-Dense Retrieval,q30,section_specific,1.0,1.0,1.0,1.0,1.0,24.95,26.76
-Dense Retrieval,q31,section_specific,1.0,1.0,1.0,1.0,0.0,25.2,26.16
-Dense Retrieval,q32,section_specific,1.0,1.0,1.0,1.0,0.0,24.38,25.32
-Dense Retrieval,q33,unanswerable_abstain,N/A,N/A,1.0,1.0,1.0,26.6,27.96
-Dense Retrieval,q34,unanswerable_abstain,N/A,N/A,1.0,1.0,1.0,25.89,26.73
-Dense Retrieval,q35,unanswerable_abstain,N/A,N/A,1.0,1.0,0.0,24.19,26.33
-Dense Retrieval,q36,unanswerable_abstain,N/A,N/A,1.0,1.0,0.0,31.23,33.61
-Dense Retrieval,q37,unanswerable_abstain,N/A,N/A,1.0,1.0,1.0,27.35,28.21
-Dense Retrieval,q38,unanswerable_abstain,N/A,N/A,1.0,1.0,0.0,29.97,31.76
-Dense Retrieval,q39,unanswerable_abstain,N/A,N/A,1.0,1.0,1.0,25.04,26.89
-Dense Retrieval,q40,unanswerable_abstain,N/A,N/A,1.0,1.0,1.0,27.42,29.68
-Hybrid Retrieval (RRF),q01,direct_factual,1.0,1.0,1.0,1.0,1.0,27.87,30.45
-Hybrid Retrieval (RRF),q02,direct_factual,1.0,1.0,1.0,1.0,1.0,29.36,30.99
-Hybrid Retrieval (RRF),q03,direct_factual,1.0,1.0,1.0,1.0,1.0,30.62,33.17
-Hybrid Retrieval (RRF),q04,direct_factual,1.0,1.0,1.0,1.0,1.0,28.2,29.53
-Hybrid Retrieval (RRF),q05,direct_factual,1.0,1.0,1.0,1.0,1.0,28.12,30.19
-Hybrid Retrieval (RRF),q06,direct_factual,1.0,1.0,1.0,1.0,1.0,27.08,28.41
-Hybrid Retrieval (RRF),q07,direct_factual,1.0,1.0,1.0,1.0,1.0,25.17,26.99
-Hybrid Retrieval (RRF),q08,direct_factual,1.0,1.0,1.0,1.0,0.33,28.96,30.31
-Hybrid Retrieval (RRF),q09,direct_factual,1.0,1.0,1.0,1.0,1.0,31.88,33.7
-Hybrid Retrieval (RRF),q10,direct_factual,1.0,1.0,1.0,1.0,1.0,29.02,30.94
-Hybrid Retrieval (RRF),q11,multi_passage,1.0,1.0,1.0,1.0,0.5,30.67,33.59
-Hybrid Retrieval (RRF),q12,multi_passage,1.0,1.0,1.0,1.0,0.0,31.97,33.2
-Hybrid Retrieval (RRF),q13,multi_passage,1.0,1.0,1.0,1.0,0.0,30.45,31.46
-Hybrid Retrieval (RRF),q14,multi_passage,1.0,1.0,1.0,1.0,0.75,28.35,29.78
-Hybrid Retrieval (RRF),q15,multi_passage,1.0,1.0,1.0,1.0,0.0,28.24,29.18
-Hybrid Retrieval (RRF),q16,multi_passage,1.0,1.0,1.0,1.0,1.0,34.37,36.21
-Hybrid Retrieval (RRF),q17,multi_passage,1.0,1.0,1.0,1.0,0.0,33.59,35.5
-Hybrid Retrieval (RRF),q18,multi_passage,1.0,1.0,1.0,1.0,1.0,33.43,34.96
-Hybrid Retrieval (RRF),q19,cross_document,1.0,1.0,1.0,1.0,0.0,30.66,32.69
-Hybrid Retrieval (RRF),q20,cross_document,0.0,0.0,1.0,1.0,0.25,30.03,33.39
-Hybrid Retrieval (RRF),q21,cross_document,0.0,0.0,1.0,1.0,0.0,30.73,32.17
-Hybrid Retrieval (RRF),q22,cross_document,1.0,0.5,1.0,1.0,0.0,34.02,36.46
-Hybrid Retrieval (RRF),q23,cross_document,1.0,0.5,1.0,1.0,0.0,35.36,37.41
-Hybrid Retrieval (RRF),q24,cross_document,0.0,0.0,1.0,1.0,0.0,62.56,64.8
-Hybrid Retrieval (RRF),q25,conflicting_nuanced,1.0,1.0,1.0,1.0,1.0,45.85,48.1
-Hybrid Retrieval (RRF),q26,conflicting_nuanced,1.0,1.0,1.0,1.0,0.0,86.46,87.3
-Hybrid Retrieval (RRF),q27,conflicting_nuanced,1.0,1.0,1.0,1.0,0.0,34.78,35.82
-Hybrid Retrieval (RRF),q28,conflicting_nuanced,1.0,1.0,1.0,1.0,0.5,69.69,71.32
-Hybrid Retrieval (RRF),q29,section_specific,1.0,1.0,1.0,1.0,1.0,68.46,70.4
-Hybrid Retrieval (RRF),q30,section_specific,1.0,1.0,1.0,1.0,1.0,32.94,34.96
-Hybrid Retrieval (RRF),q31,section_specific,1.0,1.0,1.0,1.0,0.0,34.68,35.91
-Hybrid Retrieval (RRF),q32,section_specific,1.0,1.0,1.0,1.0,0.0,33.71,34.61
-Hybrid Retrieval (RRF),q33,unanswerable_abstain,N/A,N/A,1.0,1.0,1.0,31.54,32.85
-Hybrid Retrieval (RRF),q34,unanswerable_abstain,N/A,N/A,1.0,1.0,1.0,34.69,35.54
-Hybrid Retrieval (RRF),q35,unanswerable_abstain,N/A,N/A,1.0,1.0,0.0,32.6,35.04
-Hybrid Retrieval (RRF),q36,unanswerable_abstain,N/A,N/A,1.0,1.0,0.0,30.43,32.86
-Hybrid Retrieval (RRF),q37,unanswerable_abstain,N/A,N/A,1.0,1.0,1.0,32.23,33.15
-Hybrid Retrieval (RRF),q38,unanswerable_abstain,N/A,N/A,1.0,1.0,0.0,31.93,34.02
-Hybrid Retrieval (RRF),q39,unanswerable_abstain,N/A,N/A,1.0,1.0,1.0,33.29,35.33
-Hybrid Retrieval (RRF),q40,unanswerable_abstain,N/A,N/A,1.0,1.0,1.0,35.67,37.55
-Hybrid + Reranking,q01,direct_factual,1.0,1.0,1.0,1.0,1.0,33.09,35.55
-Hybrid + Reranking,q02,direct_factual,1.0,1.0,1.0,1.0,1.0,30.1,31.87
-Hybrid + Reranking,q03,direct_factual,1.0,1.0,1.0,1.0,1.0,28.67,31.2
-Hybrid + Reranking,q04,direct_factual,1.0,1.0,1.0,1.0,1.0,31.78,33.48
-Hybrid + Reranking,q05,direct_factual,1.0,1.0,1.0,1.0,1.0,33.15,35.24
-Hybrid + Reranking,q06,direct_factual,1.0,1.0,1.0,1.0,1.0,35.12,36.74
-Hybrid + Reranking,q07,direct_factual,1.0,1.0,1.0,1.0,1.0,29.99,31.83
-Hybrid + Reranking,q08,direct_factual,1.0,1.0,1.0,1.0,0.33,56.13,57.78
-Hybrid + Reranking,q09,direct_factual,1.0,1.0,1.0,1.0,1.0,49.9,51.81
-Hybrid + Reranking,q10,direct_factual,1.0,1.0,1.0,1.0,1.0,63.82,66.2
-Hybrid + Reranking,q11,multi_passage,1.0,1.0,1.0,1.0,0.5,36.25,39.05
-Hybrid + Reranking,q12,multi_passage,1.0,1.0,1.0,1.0,0.0,33.56,34.95
-Hybrid + Reranking,q13,multi_passage,1.0,1.0,1.0,1.0,0.0,32.43,33.46
-Hybrid + Reranking,q14,multi_passage,1.0,1.0,1.0,1.0,0.75,30.93,32.34
-Hybrid + Reranking,q15,multi_passage,1.0,1.0,1.0,1.0,0.0,31.52,32.73
-Hybrid + Reranking,q16,multi_passage,1.0,1.0,1.0,1.0,1.0,30.06,32.25
-Hybrid + Reranking,q17,multi_passage,1.0,1.0,1.0,1.0,0.0,28.86,30.3
-Hybrid + Reranking,q18,multi_passage,1.0,1.0,1.0,1.0,1.0,26.12,27.91
-Hybrid + Reranking,q19,cross_document,1.0,1.0,1.0,1.0,0.0,31.28,32.78
-Hybrid + Reranking,q20,cross_document,0.0,0.0,1.0,1.0,0.25,31.95,35.54
-Hybrid + Reranking,q21,cross_document,0.0,0.0,1.0,1.0,0.0,29.57,31.33
-Hybrid + Reranking,q22,cross_document,1.0,0.5,1.0,1.0,0.0,33.19,35.25
-Hybrid + Reranking,q23,cross_document,1.0,0.5,1.0,1.0,0.0,32.38,34.5
-Hybrid + Reranking,q24,cross_document,0.0,0.0,1.0,1.0,0.0,36.49,38.99
-Hybrid + Reranking,q25,conflicting_nuanced,1.0,1.0,1.0,1.0,1.0,29.34,31.89
-Hybrid + Reranking,q26,conflicting_nuanced,1.0,1.0,1.0,1.0,0.0,27.45,28.35
-Hybrid + Reranking,q27,conflicting_nuanced,1.0,1.0,1.0,1.0,0.0,27.07,27.93
-Hybrid + Reranking,q28,conflicting_nuanced,1.0,1.0,1.0,1.0,0.5,29.05,30.46
-Hybrid + Reranking,q29,section_specific,1.0,1.0,1.0,1.0,1.0,27.31,29.03
-Hybrid + Reranking,q30,section_specific,1.0,1.0,1.0,1.0,1.0,25.58,27.36
-Hybrid + Reranking,q31,section_specific,1.0,1.0,1.0,1.0,0.0,25.81,26.74
-Hybrid + Reranking,q32,section_specific,1.0,1.0,1.0,1.0,0.0,25.93,26.8
-Hybrid + Reranking,q33,unanswerable_abstain,N/A,N/A,1.0,1.0,1.0,31.74,32.84
-Hybrid + Reranking,q34,unanswerable_abstain,N/A,N/A,1.0,1.0,1.0,32.67,33.56
-Hybrid + Reranking,q35,unanswerable_abstain,N/A,N/A,1.0,1.0,0.0,29.49,31.83
-Hybrid + Reranking,q36,unanswerable_abstain,N/A,N/A,1.0,1.0,0.0,26.72,29.02
-Hybrid + Reranking,q37,unanswerable_abstain,N/A,N/A,1.0,1.0,1.0,28.21,29.04
-Hybrid + Reranking,q38,unanswerable_abstain,N/A,N/A,1.0,1.0,0.0,24.99,26.62
-Hybrid + Reranking,q39,unanswerable_abstain,N/A,N/A,1.0,1.0,1.0,27.6,29.41
-Hybrid + Reranking,q40,unanswerable_abstain,N/A,N/A,1.0,1.0,1.0,29.39,31.23
+Dense Retrieval,q01,direct_factual,1.0,0.5,1.0,1.0,0.0,25.59,28.51
+Dense Retrieval,q02,direct_factual,1.0,0.5,1.0,1.0,1.0,25.08,26.4
+Dense Retrieval,q03,direct_factual,1.0,1.0,1.0,1.0,1.0,22.59,24.16
+Dense Retrieval,q04,direct_factual,1.0,1.0,1.0,1.0,1.0,24.43,25.85
+Dense Retrieval,q05,direct_factual,1.0,1.0,1.0,1.0,1.0,26.97,29.17
+Dense Retrieval,q06,direct_factual,1.0,1.0,1.0,1.0,1.0,23.46,25.04
+Dense Retrieval,q07,direct_factual,1.0,1.0,1.0,1.0,1.0,22.55,23.84
+Dense Retrieval,q08,direct_factual,1.0,1.0,1.0,1.0,0.33,25.55,26.86
+Dense Retrieval,q09,direct_factual,1.0,1.0,1.0,1.0,1.0,23.41,25.59
+Dense Retrieval,q10,direct_factual,1.0,1.0,1.0,1.0,1.0,23.56,26.25
+Dense Retrieval,q11,multi_passage,1.0,1.0,1.0,1.0,0.25,24.51,26.15
+Dense Retrieval,q12,multi_passage,1.0,1.0,1.0,1.0,0.0,24.39,25.39
+Dense Retrieval,q13,multi_passage,1.0,1.0,1.0,1.0,0.0,26.66,27.8
+Dense Retrieval,q14,multi_passage,1.0,1.0,1.0,1.0,0.75,26.99,28.09
+Dense Retrieval,q15,multi_passage,1.0,1.0,1.0,1.0,0.0,23.26,24.23
+Dense Retrieval,q16,multi_passage,1.0,1.0,1.0,1.0,1.0,23.61,25.92
+Dense Retrieval,q17,multi_passage,1.0,1.0,1.0,1.0,0.0,30.29,32.7
+Dense Retrieval,q18,multi_passage,1.0,1.0,1.0,1.0,1.0,25.83,27.22
+Dense Retrieval,q19,cross_document,1.0,1.0,1.0,1.0,0.0,31.16,33.17
+Dense Retrieval,q20,cross_document,0.0,0.0,1.0,1.0,0.25,28.45,31.44
+Dense Retrieval,q21,cross_document,0.0,0.0,1.0,1.0,0.0,28.3,30.09
+Dense Retrieval,q22,cross_document,1.0,0.333,1.0,1.0,0.0,27.4,29.92
+Dense Retrieval,q23,cross_document,1.0,0.5,1.0,1.0,0.0,25.13,26.92
+Dense Retrieval,q24,cross_document,0.0,0.0,1.0,1.0,0.0,25.67,27.76
+Dense Retrieval,q25,conflicting_nuanced,1.0,1.0,1.0,1.0,1.0,27.37,30.03
+Dense Retrieval,q26,conflicting_nuanced,1.0,1.0,1.0,1.0,0.0,26.66,27.78
+Dense Retrieval,q27,conflicting_nuanced,1.0,1.0,1.0,1.0,0.0,26.48,27.47
+Dense Retrieval,q28,conflicting_nuanced,1.0,1.0,1.0,1.0,0.5,25.55,27.0
+Dense Retrieval,q29,section_specific,1.0,0.5,1.0,1.0,1.0,25.91,27.71
+Dense Retrieval,q30,section_specific,1.0,1.0,1.0,1.0,1.0,30.86,32.66
+Dense Retrieval,q31,section_specific,1.0,1.0,1.0,1.0,0.0,23.68,24.35
+Dense Retrieval,q32,section_specific,1.0,1.0,1.0,1.0,0.0,23.79,24.72
+Dense Retrieval,q33,unanswerable_abstain,N/A,N/A,1.0,1.0,1.0,24.25,25.38
+Dense Retrieval,q34,unanswerable_abstain,N/A,N/A,1.0,1.0,1.0,24.65,25.25
+Dense Retrieval,q35,unanswerable_abstain,N/A,N/A,1.0,1.0,0.0,31.06,33.41
+Dense Retrieval,q36,unanswerable_abstain,N/A,N/A,1.0,1.0,0.0,24.97,27.6
+Dense Retrieval,q37,unanswerable_abstain,N/A,N/A,1.0,1.0,1.0,24.48,25.45
+Dense Retrieval,q38,unanswerable_abstain,N/A,N/A,1.0,1.0,0.0,24.82,26.59
+Dense Retrieval,q39,unanswerable_abstain,N/A,N/A,1.0,1.0,1.0,24.93,26.79
+Dense Retrieval,q40,unanswerable_abstain,N/A,N/A,1.0,1.0,1.0,25.06,26.85
+Hybrid Retrieval (RRF),q01,direct_factual,1.0,0.5,1.0,1.0,0.0,30.68,32.99
+Hybrid Retrieval (RRF),q02,direct_factual,1.0,0.5,1.0,1.0,1.0,32.8,34.94
+Hybrid Retrieval (RRF),q03,direct_factual,1.0,1.0,1.0,1.0,1.0,28.68,31.33
+Hybrid Retrieval (RRF),q04,direct_factual,1.0,1.0,1.0,1.0,1.0,28.28,29.2
+Hybrid Retrieval (RRF),q05,direct_factual,1.0,1.0,1.0,1.0,1.0,29.4,30.6
+Hybrid Retrieval (RRF),q06,direct_factual,1.0,1.0,1.0,1.0,1.0,25.36,26.81
+Hybrid Retrieval (RRF),q07,direct_factual,1.0,1.0,1.0,1.0,1.0,24.39,26.37
+Hybrid Retrieval (RRF),q08,direct_factual,1.0,1.0,1.0,1.0,0.33,24.79,26.55
+Hybrid Retrieval (RRF),q09,direct_factual,1.0,1.0,1.0,1.0,1.0,28.45,30.3
+Hybrid Retrieval (RRF),q10,direct_factual,1.0,1.0,1.0,1.0,1.0,28.31,30.98
+Hybrid Retrieval (RRF),q11,multi_passage,1.0,1.0,1.0,1.0,0.25,31.31,34.07
+Hybrid Retrieval (RRF),q12,multi_passage,1.0,1.0,1.0,1.0,0.0,30.0,31.23
+Hybrid Retrieval (RRF),q13,multi_passage,1.0,1.0,1.0,1.0,0.0,26.15,27.07
+Hybrid Retrieval (RRF),q14,multi_passage,1.0,1.0,1.0,1.0,0.75,27.99,29.15
+Hybrid Retrieval (RRF),q15,multi_passage,1.0,1.0,1.0,1.0,0.0,29.32,30.37
+Hybrid Retrieval (RRF),q16,multi_passage,1.0,1.0,1.0,1.0,1.0,27.57,29.42
+Hybrid Retrieval (RRF),q17,multi_passage,1.0,1.0,1.0,1.0,0.0,29.19,30.62
+Hybrid Retrieval (RRF),q18,multi_passage,1.0,1.0,1.0,1.0,1.0,25.42,26.8
+Hybrid Retrieval (RRF),q19,cross_document,1.0,1.0,1.0,1.0,0.0,30.36,32.61
+Hybrid Retrieval (RRF),q20,cross_document,0.0,0.0,1.0,1.0,0.25,34.89,38.16
+Hybrid Retrieval (RRF),q21,cross_document,0.0,0.0,1.0,1.0,0.0,34.69,36.46
+Hybrid Retrieval (RRF),q22,cross_document,1.0,0.5,1.0,1.0,0.0,34.24,36.38
+Hybrid Retrieval (RRF),q23,cross_document,1.0,0.5,1.0,1.0,0.0,28.03,29.79
+Hybrid Retrieval (RRF),q24,cross_document,0.0,0.0,1.0,1.0,0.0,30.01,32.08
+Hybrid Retrieval (RRF),q25,conflicting_nuanced,1.0,1.0,1.0,1.0,1.0,27.11,29.39
+Hybrid Retrieval (RRF),q26,conflicting_nuanced,1.0,1.0,1.0,1.0,0.0,27.48,28.44
+Hybrid Retrieval (RRF),q27,conflicting_nuanced,1.0,1.0,1.0,1.0,0.0,25.64,26.72
+Hybrid Retrieval (RRF),q28,conflicting_nuanced,1.0,1.0,1.0,1.0,0.5,27.12,28.54
+Hybrid Retrieval (RRF),q29,section_specific,1.0,1.0,1.0,1.0,1.0,27.0,28.74
+Hybrid Retrieval (RRF),q30,section_specific,1.0,1.0,1.0,1.0,1.0,28.38,30.26
+Hybrid Retrieval (RRF),q31,section_specific,1.0,1.0,1.0,1.0,0.0,27.78,28.73
+Hybrid Retrieval (RRF),q32,section_specific,1.0,1.0,1.0,1.0,0.0,25.67,26.71
+Hybrid Retrieval (RRF),q33,unanswerable_abstain,N/A,N/A,1.0,1.0,1.0,24.89,25.67
+Hybrid Retrieval (RRF),q34,unanswerable_abstain,N/A,N/A,1.0,1.0,1.0,34.37,35.37
+Hybrid Retrieval (RRF),q35,unanswerable_abstain,N/A,N/A,1.0,1.0,0.0,26.44,28.42
+Hybrid Retrieval (RRF),q36,unanswerable_abstain,N/A,N/A,1.0,1.0,0.0,29.89,32.4
+Hybrid Retrieval (RRF),q37,unanswerable_abstain,N/A,N/A,1.0,1.0,1.0,28.64,29.53
+Hybrid Retrieval (RRF),q38,unanswerable_abstain,N/A,N/A,1.0,1.0,0.0,27.46,29.2
+Hybrid Retrieval (RRF),q39,unanswerable_abstain,N/A,N/A,1.0,1.0,1.0,30.0,32.09
+Hybrid Retrieval (RRF),q40,unanswerable_abstain,N/A,N/A,1.0,1.0,1.0,31.36,33.31
+Hybrid + Reranking,q01,direct_factual,1.0,1.0,1.0,1.0,1.0,26.6,28.43
+Hybrid + Reranking,q02,direct_factual,1.0,1.0,1.0,1.0,1.0,24.33,26.23
+Hybrid + Reranking,q03,direct_factual,1.0,1.0,1.0,1.0,1.0,29.87,31.4
+Hybrid + Reranking,q04,direct_factual,1.0,1.0,1.0,1.0,1.0,22.07,23.01
+Hybrid + Reranking,q05,direct_factual,1.0,1.0,1.0,1.0,1.0,25.77,27.11
+Hybrid + Reranking,q06,direct_factual,1.0,1.0,1.0,1.0,1.0,27.44,28.78
+Hybrid + Reranking,q07,direct_factual,1.0,1.0,1.0,1.0,1.0,27.9,30.06
+Hybrid + Reranking,q08,direct_factual,1.0,1.0,1.0,1.0,0.33,26.44,27.97
+Hybrid + Reranking,q09,direct_factual,1.0,1.0,1.0,1.0,1.0,23.6,25.56
+Hybrid + Reranking,q10,direct_factual,1.0,1.0,1.0,1.0,1.0,27.24,29.92
+Hybrid + Reranking,q11,multi_passage,1.0,1.0,1.0,1.0,0.5,27.17,29.8
+Hybrid + Reranking,q12,multi_passage,1.0,1.0,1.0,1.0,0.0,32.65,34.13
+Hybrid + Reranking,q13,multi_passage,1.0,1.0,1.0,1.0,0.0,29.02,30.08
+Hybrid + Reranking,q14,multi_passage,1.0,1.0,1.0,1.0,0.75,27.61,29.31
+Hybrid + Reranking,q15,multi_passage,1.0,1.0,1.0,1.0,0.0,25.84,26.85
+Hybrid + Reranking,q16,multi_passage,1.0,1.0,1.0,1.0,1.0,31.2,33.43
+Hybrid + Reranking,q17,multi_passage,1.0,1.0,1.0,1.0,0.0,27.0,28.29
+Hybrid + Reranking,q18,multi_passage,1.0,1.0,1.0,1.0,1.0,24.73,26.11
+Hybrid + Reranking,q19,cross_document,1.0,1.0,1.0,1.0,0.0,27.54,29.62
+Hybrid + Reranking,q20,cross_document,0.0,0.0,1.0,1.0,0.25,32.04,35.48
+Hybrid + Reranking,q21,cross_document,0.0,0.0,1.0,1.0,0.0,29.26,31.29
+Hybrid + Reranking,q22,cross_document,1.0,0.5,1.0,1.0,0.0,40.16,42.61
+Hybrid + Reranking,q23,cross_document,1.0,0.5,1.0,1.0,0.0,33.27,35.45
+Hybrid + Reranking,q24,cross_document,0.0,0.0,1.0,1.0,0.0,30.19,31.59
+Hybrid + Reranking,q25,conflicting_nuanced,1.0,1.0,1.0,1.0,1.0,25.8,27.31
+Hybrid + Reranking,q26,conflicting_nuanced,1.0,1.0,1.0,1.0,0.0,25.45,26.53
+Hybrid + Reranking,q27,conflicting_nuanced,1.0,1.0,1.0,1.0,0.0,25.75,26.8
+Hybrid + Reranking,q28,conflicting_nuanced,1.0,1.0,1.0,1.0,0.5,27.84,29.26
+Hybrid + Reranking,q29,section_specific,1.0,1.0,1.0,1.0,1.0,29.7,31.59
+Hybrid + Reranking,q30,section_specific,1.0,1.0,1.0,1.0,1.0,27.47,29.22
+Hybrid + Reranking,q31,section_specific,1.0,1.0,1.0,1.0,0.0,27.92,29.01
+Hybrid + Reranking,q32,section_specific,1.0,1.0,1.0,1.0,0.0,27.56,28.58
+Hybrid + Reranking,q33,unanswerable_abstain,N/A,N/A,1.0,1.0,1.0,29.37,30.48
+Hybrid + Reranking,q34,unanswerable_abstain,N/A,N/A,1.0,1.0,1.0,26.71,27.59
+Hybrid + Reranking,q35,unanswerable_abstain,N/A,N/A,1.0,1.0,0.0,23.82,25.96
+Hybrid + Reranking,q36,unanswerable_abstain,N/A,N/A,1.0,1.0,0.0,30.25,32.89
+Hybrid + Reranking,q37,unanswerable_abstain,N/A,N/A,1.0,1.0,1.0,27.37,28.21
+Hybrid + Reranking,q38,unanswerable_abstain,N/A,N/A,1.0,1.0,0.0,24.98,26.69
+Hybrid + Reranking,q39,unanswerable_abstain,N/A,N/A,1.0,1.0,1.0,26.87,28.1
+Hybrid + Reranking,q40,unanswerable_abstain,N/A,N/A,1.0,1.0,1.0,28.33,30.15
