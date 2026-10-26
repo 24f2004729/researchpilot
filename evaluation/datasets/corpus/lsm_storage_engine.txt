@@ -1,0 +1,26 @@
+# The Log-Structured Merge-Tree (LSM-Tree) Architecture
+Patrick O'Neil, Edward O'Neil, and Gerhard Weikum
+
+## 1. Overview
+The Log-Structured Merge-tree (LSM-tree) is a storage data structure designed for high-performance indexing on files with high insertion volume. Unlike B-trees that perform in-place updates leading to random disk I/O, LSM-trees defer and batch disk writes by appending mutations sequentially to an in-memory buffer called a MemTable.
+
+## 2. Core Components: MemTable and Write-Ahead Log
+Write operations in an LSM-tree (insert, update, delete) are appended to a Write-Ahead Log (WAL) on disk for durability before being inserted into an in-memory sorted skip list or red-black tree called the MemTable.
+When the MemTable reaches a configured capacity threshold (typically between 32MB and 64MB), it is converted into an immutable MemTable, and a new active MemTable is allocated. A background flush thread writes the contents of the immutable MemTable to disk sequentially as an immutable Sorted String Table (SSTable) at Level 0 (L0).
+
+## 3. SSTables and Bloom Filters
+An SSTable consists of sorted key-value pairs divided into fixed-size data blocks (usually 4KB), accompanied by an index block and a Bloom filter. Because keys are sorted, finding a key within an SSTable requires binary search over the index block.
+To avoid expensive disk reads for non-existent keys, every SSTable includes a probabilistic Bloom filter in memory. A Bloom filter can determine with 100% certainty if a key does not exist, drastically reducing read amplification on point queries.
+
+## 4. Compaction Strategies: Size-Tiered vs Leveled
+As write operations continue, the number of SSTables on disk grows. Compaction is the background process that merges multiple SSTables, discards deleted or superseded keys (tombstones), and produces new sorted runs.
+There are two primary compaction strategies:
+1. Size-Tiered Compaction: Groups SSTables of similar sizes into tiers. Once a tier accumulates a threshold number of SSTables (typically 4), they are merged into a single larger SSTable. Size-tiered compaction has lower write amplification but higher space amplification (up to 100% temporary disk headroom required) and higher read latency.
+2. Leveled Compaction: Organizes SSTables into numbered levels (L0, L1, L2, etc.). Each level has a fixed total capacity that grows exponentially by a factor of 10 (e.g., L1 = 10MB, L2 = 100MB, L3 = 1GB). In levels L1 and above, keys within the level are strictly non-overlapping. Leveled compaction achieves lower read amplification and low space amplification (~10%), but incurs higher write amplification due to frequent re-merging across levels.
+
+## 5. Storage Amplification Trade-offs
+LSM-trees navigate the fundamental RUM Conjecture (Read, Update, Memory trade-off):
+- Write Amplification: Bytes written to disk divided by bytes requested by the client application.
+- Read Amplification: Disk blocks read per point lookup query.
+- Space Amplification: Disk space occupied divided by the raw uncompressed data size.
+While LSM-trees optimize update throughput by converting random writes to sequential writes, point reads may need to examine multiple levels unless filtered by Bloom filters.

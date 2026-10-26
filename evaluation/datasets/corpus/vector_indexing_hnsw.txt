@@ -1,0 +1,28 @@
+# Efficient and Robust Approximate Nearest Neighbor Search Using HNSW Graphs
+Yury Malkov and Dmitry Yashunin
+
+## 1. Introduction to Graph-Based ANN
+Approximate Nearest Neighbor (ANN) search in high-dimensional vector spaces is fundamental to vector databases, retrieval-augmented generation (RAG), and neural semantic search. Hierarchical Navigable Small World (HNSW) graphs represent the state-of-the-art graph-based indexing algorithm, offering logarithmic search time complexity O(log N) and superior recall compared to tree-based and quantization-based approaches (such as IVF and Product Quantization).
+
+## 2. Structure of Hierarchical Small World Graphs
+The HNSW structure is inspired by the Skip List, but generalized to multi-layer proximity graphs:
+- Layer 0 (Bottom layer): Contains all vectors in the dataset and connects them in a dense proximity graph with maximum degree per vertex M0 (typically 2*M).
+- Layer l > 0 (Upper layers): Contains an exponentially decaying subset of the dataset vectors. The probability of an element being present at layer l decreases exponentially with parameter mL = 1 / ln(M).
+- Top Layer: Contains very few vectors separated by large distances, providing long-range highway links for fast entry point navigation.
+
+## 3. Key Hyperparameters
+1. M (Number of bidirectional links per node): Typically configured between 16 and 64. Higher M improves retrieval recall and clustering robustness on high-dimensional data, but increases memory usage and construction time.
+2. efConstruction (Size of the dynamic candidate list during graph building): Determines the search depth when connecting newly inserted nodes. Typical values range from 100 to 200. Higher efConstruction results in higher graph quality and better recall at the cost of longer indexing latency.
+3. efSearch (Size of the dynamic candidate list during query time): Controls the trade-off between search speed and recall. A higher efSearch explores more neighbors during query routing, elevating Recall@k toward 99% while increasing query latency.
+
+## 4. Distance Metrics and Search Routine
+HNSW supports Euclidean (L2) distance, Inner Product (Dot Product), and Cosine Distance. When normalized embeddings (unit length vectors where ||v|| = 1) are used, Cosine Similarity is equivalent to 1 - (Dot Product / 2), enabling optimized SIMD inner product operations.
+During query execution:
+1. Search starts at the top layer entry point and performs greedy routing toward the closest neighbor.
+2. Once a local minimum is reached at layer l, search descends to layer l - 1 using the current closest node as entry point.
+3. At Layer 0, a priority queue of size efSearch explores the dense graph to discover the top K nearest neighbors.
+
+## 5. Comparison: HNSW vs IVFFlat in pgvector
+In PostgreSQL pgvector, two primary index types exist:
+- IVFFlat (Inverted File Flat): Partitions vector space into Voronoi cells using k-means clustering. It requires fast build times and low memory overhead, but suffers from lower recall (typically 80-90%) and requires training on representative data.
+- HNSW: Builds a navigable multi-layer graph. It requires zero training data, guarantees higher recall (>95-99%), and provides stable low latency under concurrent query loads, making it the superior choice for production RAG systems despite a 1.5x to 2x higher RAM footprint.

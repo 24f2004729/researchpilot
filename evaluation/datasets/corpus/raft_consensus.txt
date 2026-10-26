@@ -1,0 +1,22 @@
+# In Search of an Understandable Consensus Algorithm (Raft)
+Diego Ongaro and John Ousterhout, Stanford University
+
+## 1. Introduction
+Raft is a consensus algorithm for managing a replicated log. It produces a result equivalent to (multi-Paxos), and it is as efficient as Paxos, but its structure is different from Paxos; this makes Raft more understandable and easier to build practical distributed systems. Raft decomposes consensus into three independent subproblems: Leader election, Log replication, and Safety.
+
+## 2. Raft Basics
+A Raft cluster consists of several servers; five is a typical number, allowing the system to tolerate two failures. At any given time, each server is in one of three states: Leader, Follower, or Candidate. In normal operation there is exactly one leader and all of the other servers are followers.
+Followers are passive: they issue no requests on their own but simply respond to requests from leaders and candidates. The leader handles all client requests (if a client contacts a follower, the follower redirects it to the leader). The third state, candidate, is used to elect a new leader.
+
+## 3. Leader Election Protocol
+Raft uses a heartbeat mechanism to trigger leader election. When servers start up, they begin as followers. A server remains in follower state as long as it receives valid RPCs from a leader or candidate. Leaders send periodic heartbeats (AppendEntries RPCs that carry no log entries) at 50ms intervals to all followers.
+If a follower receives no communication over a period of time called the election timeout, then it assumes there is no viable leader and begins an election to choose a new leader.
+To prevent split votes in the first place, election timeouts are chosen randomly from a fixed interval of 150ms to 300ms. This randomizes timeouts across nodes so that in most cases only a single server will time out; it wins the election and sends heartbeats before any other servers time out.
+To begin an election, a follower increments its current term and transitions to candidate state. It votes for itself and issues RequestVote RPCs in parallel to each of the other servers in the cluster. A candidate continues in this state until one of three things happens: (a) it wins the election, (b) another server establishes itself as leader, or (c) a period of time goes by with no winner. A candidate wins an election if it receives votes from a majority of the servers in the full cluster for the same term.
+
+## 4. Log Replication
+Once a leader has been elected, it begins servicing client requests. Each client request contains a command to be executed by the replicated state machines. The leader appends the command to its log as a new entry, then issues AppendEntries RPCs in parallel to each of the other servers to replicate the entry. When the entry has been safely replicated, the leader applies the entry to its state machine and returns the result of that execution to the client.
+A log entry is committed once the leader that created the entry has replicated it on a majority of the servers (for example, on 3 of 5 servers). Replicating synchronously across all nodes increases write latency, but replicating to a simple quorum majority ensures safety while minimizing tail latency.
+
+## 5. Cluster Safety Property
+Raft guarantees that if any server has applied a particular log entry to its state machine, then no other server may apply a different command for the same log index. To enforce this, Raft uses an election restriction: RequestVote RPC includes information about the candidate's log, and the voter denies its vote if its own log is more up-to-date than that of the candidate. Log completeness guarantees that a leader contains all committed entries from past terms.
